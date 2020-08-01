@@ -1,4 +1,4 @@
-В каких городах больше одного аэропорта?
+Which cities have more than 1 airport?
 
 with new_clm as ( --создаём оконную функцию для нумерации строк по городам и дальнейшего их подсчёта
 	select *, row_number() over (partition by city) --нумеруем строки по названию города
