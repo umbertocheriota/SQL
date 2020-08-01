@@ -1,4 +1,4 @@
---5.1 Найдите свободные места для каждого рейса
+--Find vacant seats for all flights
 
 with vacant_seats as ( --создаём CTE "свободные кресла"
 	select f.flight_id, s.seat_no as vacant_seat --отображаем все кресла на каждом flight_id
