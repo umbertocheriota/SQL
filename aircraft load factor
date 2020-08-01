@@ -14,7 +14,7 @@ select
 from (select bp.flight_id, bp.seat_no from boarding_passes bp order by flight_id) as occupied_seats --подзапрос для выборки занятых кресел (пришедших на рейс пассажиров)
 join flights f on f.flight_id = occupied_seats.flight_id 
 join (select aircraft_code, count(row_number) as seat_capacity --подзапрос для расчёта общего количества мест на каждом типе ВС
-	from (select s.aircraft_code,	s.seat_no,	row_number() over (partition by s.aircraft_code) --подзапрос с оконной функцикй для нумерации всех кресел на борту
+	from (select s.aircraft_code, s.seat_no, row_number() over (partition by s.aircraft_code) --подзапрос с оконной функцикй для нумерации всех кресел на борту
 		from seats s) as seat_capacity
 	group by aircraft_code) as seat_capacity on seat_capacity.aircraft_code = f.aircraft_code --соединяем подзапрос по типу ВС
 where f.actual_departure is not null --отфильтровываем NULL значения actual_departure, т.е. те рейсы, которые ещё не вылетали
