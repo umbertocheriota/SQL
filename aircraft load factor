@@ -1,5 +1,5 @@
---Найдите % соотношение занятых мест к общему количеству мест в самолете (загрузка вс). 
---Добавьте столбец с накопительным итогом - суммарное количество вывезенных пассажиров из аэропорта за день. 
+--Find % ratio of occupied seats to the total number of seats in the aircraft (load factor)
+--Add a column with a cumulative total quantity of passengers departed from the airport during the day.
 
 with ttl as ( --создаём CTE, чтобы из него получить сумму занятых кресел, т.к. нельзя использовать оконную функцию в другой оконной функции 
 select 
