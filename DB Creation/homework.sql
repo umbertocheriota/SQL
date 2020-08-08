@@ -1,22 +1,3 @@
-/*
-Спроектируйте базу данных для следующих сущностей:
--язык (в смысле английский, французский и тп)
--народность (в смысле славяне, англосаксы и тп)
--страны (в смысле Россия, Германия и тп)
-
-Правила следующие:
--на одном языке может говорить несколько народностей
--одна народность может входить в несколько стран
--каждая страна может состоять из нескольких народностей
-
-Дополнительная часть:
--показать, как назначать внешние ключи краткой записью при создании таблицы и как можно присвоить внешние ключи для столбцов существующей таблицы
--масштабировать получившуюся базу данных используя следующие типы данных: timestamp, boolean и text[]
-
-в таблицах со связями должны быть составные первичные ключи, так как связи по двум столбцам, то и ограничение должно быть по двум столбцам
-дополните работу запросами на внесение данных в таблицы со связями, машина не знает какие фактические связи могут существовать и поэтому данные вносятся руками
-*/
-
 --create schema homework
 
 --set search_path to homework
@@ -39,17 +20,17 @@ create table country(
 	);
 
 create table country_nationality(
-	nation_id int, --not null и unique не нужно, т.к. указывается далее первичным ключом
+	nation_id int,
 	country_id int,
-	primary key (nation_id, country_id), --составной первичный ключ
+	primary key (nation_id, country_id),
 	foreign key (country_id) references country (country_id),
 	foreign key (nation_id) references nationality (nation_id)
 	);
 	
 create table nationality_language(
-	nation_id int, --not null и unique не нужно, т.к. указывается далее первичным ключом
+	nation_id int,
 	language_id int,
-	primary key (nation_id, language_id) --составной первичный ключ
+	primary key (nation_id, language_id)
 	);
 	
 alter table nationality_language 
