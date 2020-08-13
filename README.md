@@ -1,4 +1,4 @@
-# BI-Analysis
+# BI-Analysis (practice and homework from 'Netology' Online Learning Center)
 PostgreSQL:
 - CTE, 
 - views, 
