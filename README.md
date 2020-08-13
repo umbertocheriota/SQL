@@ -4,8 +4,8 @@ PostgreSQL:
 - views, 
 - window functions, 
 - subqueries, 
-- joins, 
-- except etc; 
+- joins / except,
+- create / insert etc;
 
 Excel:
 - pivot tables, 
@@ -15,4 +15,4 @@ Excel:
 - quartiles, 
 - hypothesis tests, 
 - t-test, 
-- z-test
+- z-test.
