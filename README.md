@@ -1,4 +1,4 @@
-# BI-Analysis (SQL, Excel, SqlDBM - ER modeling)
+# BI-Analysis (SQL, Excel, Tableau, SqlDBM - ER modeling)
 PostgreSQL:
 - CTE, 
 - views, 
@@ -9,6 +9,7 @@ PostgreSQL:
 
 Excel:
 - pivot tables, 
+- vlookup,
 - descriptive statistics, 
 - dispersion, 
 - percentiles, 
