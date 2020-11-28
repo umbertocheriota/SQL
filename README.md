@@ -1,4 +1,4 @@
-# BI-Analysis (SQL, Excel, Tableau Dashboards, SqlDBM - ER modeling)
+# BI-Analysis (SQL, Excel, Tableau and Power BI reports, SqlDBM - ER modeling)
 PostgreSQL:
 - CTE, 
 - views, 
