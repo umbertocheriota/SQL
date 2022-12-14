@@ -1,11 +1,12 @@
-# BI-Analysis (SQL, Excel, Tableau and Power BI reports, SqlDBM - ER modeling)
+# SQL (PostgreSQL, SSMS), Excel, SqlDBM - ER modeling)
 PostgreSQL:
 - CTE, 
 - views, 
 - window functions, 
 - subqueries, 
 - joins / except,
-- create / insert etc.
+- create / insert,
+- procedures / functions / triggers.
 
 Excel:
 - pivot tables, 
